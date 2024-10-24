@@ -1,4 +1,4 @@
-#AI #deeplearning #ml #dl #neuralnetorks #embeddings #creativity
+# Creativec
 
 ![](./assets/logo.png)
 
