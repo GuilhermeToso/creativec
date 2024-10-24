@@ -4,12 +4,9 @@
 
 ---
 
-## Demo
+# Demo
 
-<video width="600" controls>
-  <source src="./assets/video.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+[Download the demo video](./assets/video.mp4)
 
 ---
 
