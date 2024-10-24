@@ -1,0 +1,35 @@
+version: "3.8"
+
+services:
+  backend:
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    container_name: creativec_backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./server:/app
+    environment:
+      - ENV=production
+    networks:
+      - creativec-network
+
+  frontend:
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    container_name: creativec_frontend
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - NEXT_PUBLIC_API_URL=http://creativec_backend:8000/api/v1  # Pointing to the backend service in Docker network
+    depends_on:
+      - backend  # Ensure backend starts first
+    networks:
+      - creativec-network
+
+networks:
+  creativec-network:
+    driver: bridge

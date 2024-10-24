@@ -1,0 +1,11 @@
+server/venv
+server/.idea
+client/node_modules
+client/.idea
+client/dist
+client/.nuxt
+client/.nuxt-generate
+__pycache__/
+*.pyc
+*.pyo
+.env
